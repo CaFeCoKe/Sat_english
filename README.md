@@ -17,8 +17,9 @@
   
   - 해결방법 2. [torchtext 공식 마이그레이션 튜토리얼](https://github.com/pytorch/text/blob/master/examples/legacy_tutorial/migration_tutorial.ipynb) 을 보고 새로 공부하여 적용한다.
 
+
 - Overfitting(과잉적합)
-  - 네트워크 구성에 있어 Dropout을 0.5로 설정하였고, LSTM Layer는 4층, Hidden층의 노드는 200개로 설정 하였다.
+  - 네트워크 구성에 있어 Dropout을 0.5로 설정하였고, epoch는 30으로 하여 3가지의 네트워크 모델을 학습시켰다. (사용 데이터: CoLA, 훈련, 검증 데이터의 비율 약 16 : 1)
   <table border ="0">
     <tr>
       <td><img src="https://user-images.githubusercontent.com/86700191/159026474-96caa311-fa8b-4b7b-9fa6-4105996b455d.PNG" width="100%" height="30%"></td>
@@ -31,6 +32,9 @@
       <td>num_layer = 4, hidden_size = 200</td>
     </tr>
   </table>
+  
+  - 3가지의 네트워크 모델 중 마지막 모델을 채택 하였고, 이 모델에서의 overfitting이 일어나는 구간인 15~20회의 epoch 중 최대치인 20을 선정하였다. 또한, 검증데이터에 비해 훈련데이터의 비율이 많다고 판단하여 16 : 1에서 5: 1 의 비율로 조정하였다.
+  ![final](https://user-images.githubusercontent.com/86700191/159031134-d385725c-bd24-4cb8-81fb-abd01965f095.PNG)
 
 
 ## 6. 참고자료(사이트)

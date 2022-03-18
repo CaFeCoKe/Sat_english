@@ -17,6 +17,22 @@
   
   - 해결방법 2. [torchtext 공식 마이그레이션 튜토리얼](https://github.com/pytorch/text/blob/master/examples/legacy_tutorial/migration_tutorial.ipynb) 을 보고 새로 공부하여 적용한다.
 
+- Overfitting(과잉적합)
+  - 네트워크 구성에 있어 Dropout을 0.5로 설정하였고, LSTM Layer는 4층, Hidden층의 노드는 200개로 설정 하였다.
+  <table border ="0">
+    <tr>
+      <td><img src="https://user-images.githubusercontent.com/86700191/159026474-96caa311-fa8b-4b7b-9fa6-4105996b455d.PNG" width="100%" height="30%"></td>
+      <td><img src="https://user-images.githubusercontent.com/86700191/159026478-8b952d9d-923d-45b3-bc04-2265e8d5d40a.PNG" width="100%" height="30%"></td>
+      <td><img src="https://user-images.githubusercontent.com/86700191/159026462-cd858b87-a883-460b-a50c-f24944732dbe.PNG" width="100%" height="30%"></td>
+    </tr>
+    <tr>
+      <td>num_layer = 2, hidden_size = 200</td>
+      <td>num_layer = 4, hidden_size = 100</td>
+      <td>num_layer = 4, hidden_size = 200</td>
+    </tr>
+  </table>
+
+
 ## 6. 참고자료(사이트)
 - [PyTorch 공식 설명](https://pytorch.org/docs/stable/index.html)
 - [NLTK 공식 설명](https://www.nltk.org/api/nltk.html)

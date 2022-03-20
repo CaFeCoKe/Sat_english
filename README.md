@@ -34,7 +34,7 @@
   </table>
   
   - 3가지의 네트워크 모델 중 마지막 모델을 채택 하였고, 이 모델에서의 overfitting이 일어나는 구간인 15~20회의 epoch 중 최대치인 20을 선정하였다. 또한, 검증데이터에 비해 훈련데이터의 비율이 많다고 판단하여 16 : 1에서 5: 1 의 비율로 조정하였다.
-  ![final](https://user-images.githubusercontent.com/86700191/159031134-d385725c-bd24-4cb8-81fb-abd01965f095.PNG)
+  ![final](https://user-images.githubusercontent.com/86700191/159161929-1d49e099-a1ab-455e-8d7b-7dd0fd33e41c.PNG)
 
 
 ## 6. 참고자료(사이트)

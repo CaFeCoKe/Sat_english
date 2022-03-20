@@ -2,13 +2,20 @@
  Using Pytorch-LSTM
 
 ## 1. 사용 라이브러리
+- Pytorch-torch
+- Pytorch-torchtext
+- NLTK
+- numpy
+- matplotlib
+- scikit-learn
 
 ## 2. 알고리즘 순서도
 
 ## 3. 네트워크 구성도
 
 ## 4. 결과
-
+- CoLA 사전학습 모델과 CoLA 사전학습+SAT 튜닝 모델의 AUROC 값 비교
+![result](https://user-images.githubusercontent.com/86700191/159162497-7971483b-a38e-464f-9d71-a2bffebcf41d.PNG)
 ## 5. 유의점
 - torchtext를 업그레이드를 하여 v0.12.0으로 한다면 v0.9.0부터 legacy로 지원해주었던 마이그레이션 클래스들이 지원이 안될 것이다.
 ![legacy](https://user-images.githubusercontent.com/86700191/158297203-bb789adb-664d-4af7-90d9-e4674a80e956.PNG)
@@ -42,3 +49,4 @@
 - [NLTK 공식 설명](https://www.nltk.org/api/nltk.html)
 - [Base Code & data](https://github.com/bjpublic/DeepLearningProject/tree/main/08_%EC%88%98%EB%8A%A5_%EC%98%81%EC%96%B4_%ED%92%80%EA%B8%B0)
 - [Padding 설명](https://everywhere-data.tistory.com/66)
+- [ROC curve, AUC](https://koreapy.tistory.com/897)

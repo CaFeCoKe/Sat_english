@@ -15,7 +15,7 @@
 
 ## 4. 결과
 - CoLA 사전학습 모델과 CoLA 사전학습+SAT 튜닝 모델의 AUROC 값 비교
-![result](https://user-images.githubusercontent.com/86700191/159162497-7971483b-a38e-464f-9d71-a2bffebcf41d.PNG)
+![result](https://user-images.githubusercontent.com/86700191/159204296-9d1b8455-5352-4426-bfe1-847f8dc1f3a9.PNG)
 ## 5. 유의점
 - torchtext를 업그레이드를 하여 v0.12.0으로 한다면 v0.9.0부터 legacy로 지원해주었던 마이그레이션 클래스들이 지원이 안될 것이다.
 ![legacy](https://user-images.githubusercontent.com/86700191/158297203-bb789adb-664d-4af7-90d9-e4674a80e956.PNG)
@@ -41,7 +41,7 @@
   </table>
   
   - 3가지의 네트워크 모델 중 마지막 모델을 채택 하였고, 이 모델에서의 overfitting이 일어나는 구간인 15~20회의 epoch 중 최대치인 20을 선정하였다. 또한, 검증데이터에 비해 훈련데이터의 비율이 많다고 판단하여 16 : 1에서 5: 1 의 비율로 조정하였다.
-  ![final](https://user-images.githubusercontent.com/86700191/159161929-1d49e099-a1ab-455e-8d7b-7dd0fd33e41c.PNG)
+![final](https://user-images.githubusercontent.com/86700191/159204298-b9ea3731-ca1a-409b-beb2-35a7a5ad2591.PNG)
 
 
 ## 6. 참고자료(사이트)

@@ -8,6 +8,7 @@
 - numpy
 - matplotlib
 - scikit-learn
+- dill
 
 ## 2. 알고리즘 순서도
 
@@ -16,6 +17,11 @@
 ## 4. 결과
 - CoLA 사전학습 모델과 CoLA 사전학습+SAT 튜닝 모델의 AUROC 값 비교
 ![result](https://user-images.githubusercontent.com/86700191/159204296-9d1b8455-5352-4426-bfe1-847f8dc1f3a9.PNG)
+
+
+- MaxPool을 쓰는 발전된 네트워크의 CoLA 사전학습 모델과 CoLA 사전학습+SAT 튜닝 모델의 AUROC 값 비교
+![result](https://user-images.githubusercontent.com/86700191/159485868-407ed1e7-1396-4523-b759-a7a513da1a41.PNG)
+
 ## 5. 유의점
 - torchtext를 업그레이드를 하여 v0.12.0으로 한다면 v0.9.0부터 legacy로 지원해주었던 마이그레이션 클래스들이 지원이 안될 것이다.
 ![legacy](https://user-images.githubusercontent.com/86700191/158297203-bb789adb-664d-4af7-90d9-e4674a80e956.PNG)
@@ -40,10 +46,12 @@
     </tr>
   </table>
   
-  - 3가지의 네트워크 모델 중 마지막 모델을 채택 하였고, 이 모델에서의 overfitting이 일어나는 구간인 15~20회의 epoch 중 최대치인 20을 선정하였다. 또한, 검증데이터에 비해 훈련데이터의 비율이 많다고 판단하여 16 : 1에서 5: 1 의 비율로 조정하였다.
+  - 3가지의 네트워크 모델 중 마지막 모델을 채택 하였고, 이 모델에서의 overfitting이 일어나는 구간인 15~20회의 epoch 중 최대치인 20을 선정하였다. 또한, 검증데이터에 비해 훈련데이터의 비율이 많다고 판단하여 16 : 1에서 8 : 1 의 비율로 조정하였다.
 ![final](https://user-images.githubusercontent.com/86700191/159204298-b9ea3731-ca1a-409b-beb2-35a7a5ad2591.PNG)
-
-
+  
+  - MaxPool Layer를 이용한 발전된 모델에서 CoLA데이터를 이용한 사전학습시 overfitting이 일어난다. 하지만 AUROC 값이 잘 나오는 것을 보면 테스트 데이터에 대해 예측이 잘 되는 것이라고 봐도 되는데 수치만 그런것인지 데모로 확인할 것이다.
+![over](https://user-images.githubusercontent.com/86700191/159486908-d333871c-2933-4454-8466-8bed959c5460.PNG)
+  
 ## 6. 참고자료(사이트)
 - [PyTorch 공식 설명](https://pytorch.org/docs/stable/index.html)
 - [NLTK 공식 설명](https://www.nltk.org/api/nltk.html)

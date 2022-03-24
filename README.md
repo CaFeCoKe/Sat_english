@@ -22,6 +22,7 @@
 - MaxPool을 쓰는 발전된 네트워크의 CoLA 사전학습 모델과 CoLA 사전학습+SAT 튜닝 모델의 AUROC 값 비교
 ![result](https://user-images.githubusercontent.com/86700191/159485868-407ed1e7-1396-4523-b759-a7a513da1a41.PNG)
 
+
 - demo 테스트 결과 (고3 수능 및 모의고사 5문제, 고1 모의고사 3문제)
 ![demo](https://user-images.githubusercontent.com/86700191/159657328-65210bb4-fb13-4b3c-b4db-19fa474005ef.PNG)
   <table border ="0">
@@ -73,7 +74,13 @@
   
   - MaxPool Layer를 이용한 발전된 모델에서 CoLA데이터를 이용한 사전학습시 overfitting이 일어난다. 하지만 AUROC 값이 잘 나오는 것을 보면 테스트 데이터에 대해 예측이 잘 되는 것이라고 봐도 되는데 수능 문제로 추가 학습 후 실제 데모를 보면 새로운 문제에 대해 가장 예측이 잘된다.
 ![over](https://user-images.githubusercontent.com/86700191/159486908-d333871c-2933-4454-8466-8bed959c5460.PNG)
+
   
+- 정확도에 대한 고찰
+  - CoLA 사전학습 모델과 사전학습후 SAT 튜닝 모델의 차이 <br>
+  같은 네트워크 구성을 가진 모델에서 튜닝 한 모델이 더 좋은 결과를 보여준다. CoLA데이터와 SAT 영어 문제의 문장에 사용되는 단어나 문장의 길이 같은 차이점이 있으며,CoLA와 SAT 훈련 데이터의 비율은 약 80 : 1로 훈련 모델이 CoLA 데이터쪽으로 치우칠 수 있다.
+  - 더 좋은 결과를 위한 보완점
+  사전 학습 데이터에 대해 좀 더 많은 데이터나 아니면 수능이라는 특정 분야가 있으니 모의고사, EBS 문제집같은 것들에서 데이터를 만들어 쓰면 어떨까 싶다.
 
 ## 6. 참고자료(사이트)
 - [PyTorch 공식 설명](https://pytorch.org/docs/stable/index.html)

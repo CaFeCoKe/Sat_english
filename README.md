@@ -13,7 +13,10 @@
 ## 2. 알고리즘 순서도
 
 ## 3. 네트워크 구성도
-
+- Sat_pre_training.ipynb 의 Network
+![SAT_Network](https://user-images.githubusercontent.com/86700191/159911376-2a614c20-7cdb-4464-b76b-7a91f70eb7ae.png)
+- Sat_advanced_model.ipynb 의 Network
+![SAT_Advanced_Network](https://user-images.githubusercontent.com/86700191/159911382-615a2277-18a0-4f06-b8e7-1cfdf9878c5b.png)
 ## 4. 결과
 - CoLA 사전학습 모델과 CoLA 사전학습+SAT 튜닝 모델의 AUROC 값 비교
 ![result](https://user-images.githubusercontent.com/86700191/159204296-9d1b8455-5352-4426-bfe1-847f8dc1f3a9.PNG)
@@ -79,7 +82,9 @@
 - 정확도에 대한 고찰
   - CoLA 사전학습 모델과 사전학습후 SAT 튜닝 모델의 차이 <br>
   같은 네트워크 구성을 가진 모델에서 튜닝 한 모델이 더 좋은 결과를 보여준다. CoLA데이터와 SAT 영어 문제의 문장에 사용되는 단어나 문장의 길이 같은 차이점이 있으며,CoLA와 SAT 훈련 데이터의 비율은 약 80 : 1로 훈련 모델이 CoLA 데이터쪽으로 치우칠 수 있다.
-  - 더 좋은 결과를 위한 보완점
+  - Max Pool의 유무 <br>
+  Bi-LSTM의 입력을 임베딩할때 패딩과정을 걸친다. 따로 패딩값을 지정하지 않고 default값인 'pad'(encoding시 1)이 들어가게 될텐데 짧은 문장들은 의미가 없는 값이 많아진다. 유의미한 값을 뽑기 위하여 Max Pool을 걸치게 되고 이로 인해 더욱 좋은 결과를 나타냈다.
+  - 더 좋은 결과를 위한 보완점<br>
   사전 학습 데이터에 대해 좀 더 많은 데이터나 아니면 수능이라는 특정 분야가 있으니 모의고사, EBS 문제집같은 것들에서 데이터를 만들어 쓰면 어떨까 싶다.
 
 ## 6. 참고자료(사이트)

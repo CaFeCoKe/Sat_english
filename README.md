@@ -1,14 +1,13 @@
 # Sat_english
- Using Pytorch-LSTM
+Bi-LSTM을 사용 하여 수능 영어문제를 풀어본다. CoLA데이터를 통해 학습하며, 추가로 수능 데이터도 학습하여 두 네트워크의 성능 차이가 유의미한지 보게 되며, 또한 네트워크 구성에 Max Pool의 유무에 따른 성능이 차이가 나는지 본다.
 
 ## 1. 사용 라이브러리
-- Pytorch-torch
-- Pytorch-torchtext
-- NLTK
-- numpy
-- matplotlib
-- scikit-learn
-- dill
+- Pytorch-torch : Bi-LSTM 구성
+- Pytorch-torchtext : Dataset & DataLoader
+- NLTK : Tokenizing
+- numpy, matplotlib : Loss 값 그래프화
+- scikit-learn : AUC, ROC_curve 사용
+- dill : 모델 저장 및 불러오기
 
 ## 2. 알고리즘 순서도
 

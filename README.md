@@ -10,12 +10,14 @@ Bi-LSTM을 사용 하여 수능 영어문제를 풀어본다. CoLA데이터를 �
 - dill : 모델 저장 및 불러오기
 
 ## 2. 알고리즘 순서도
+![SAT_flowchart](https://user-images.githubusercontent.com/86700191/160269238-a497b227-002f-4dbd-8531-93d6c3f82db1.png)
 
 ## 3. 네트워크 구성도
 - Sat_pre_training.ipynb 의 Network
 ![SAT_Network](https://user-images.githubusercontent.com/86700191/159911376-2a614c20-7cdb-4464-b76b-7a91f70eb7ae.png)
 - Sat_advanced_model.ipynb 의 Network
 ![SAT_Advanced_Network](https://user-images.githubusercontent.com/86700191/159911382-615a2277-18a0-4f06-b8e7-1cfdf9878c5b.png)
+
 ## 4. 결과
 - CoLA 사전학습 모델과 CoLA 사전학습+SAT 튜닝 모델의 AUROC 값 비교
 ![result](https://user-images.githubusercontent.com/86700191/159204296-9d1b8455-5352-4426-bfe1-847f8dc1f3a9.PNG)
